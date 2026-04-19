@@ -842,7 +842,7 @@ img {
 /* ===== Contact Section ===== */
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 60px;
   align-items: start;
 }
@@ -893,6 +893,58 @@ img {
 .contact-item p {
   font-size: 0.88rem;
   color: var(--gray);
+}
+
+.contact-qr {
+  background: var(--white);
+  padding: 24px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  border: 2px solid var(--accent-light);
+}
+
+.contact-qr h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--primary-dark);
+}
+
+.contact-qr p {
+  color: var(--gray);
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.qr-code-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.qr-code {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.qr-code:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.qr-download {
+  margin-top: 4px;
+}
+
+.btn-small {
+  padding: 6px 12px;
+  font-size: 0.8rem;
 }
 
 .contact-form {
@@ -1073,6 +1125,16 @@ img {
 
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .form-row { grid-template-columns: 1fr; }
+
+  .contact-qr {
+    order: 3;
+    padding: 20px;
+  }
+  
+  .qr-code {
+    width: 100px;
+    height: 100px;
+  }
 
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
 }
